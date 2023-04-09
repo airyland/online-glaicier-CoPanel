@@ -1,0 +1,50 @@
+{
+    "manifest_version": 3,
+    "name": "CoPanel",
+    "description": "CoPanel is AI-based tool to supercharge your productivity.",
+    "omnibox": { "keyword" : "ai" },
+    "version": "0.0.1",
+    "icons": {
+        "16": "copanel16.png",
+        "32": "copanel32.png",
+        "48": "copanel48.png",
+        "128": "copanel128.png"
+    },
+    "background": {
+        "service_worker": "/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "/inject.js"
+            ],
+            "css": [
+                "/remixicon/remixicon.css",
+                "/element.css",
+                "/copanel.css"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+          "resources": [ "/img/*", "/remixicon/*", "/*"],
+          "matches": [
+            "https://*/*"
+          ]
+        }
+      ],
+    "permissions": [
+        "scripting",
+        "storage",
+        "tabs",
+        "contextMenus"
+    ],
+    "host_permissions": [
+        "http://*/",
+        "https://*/"
+    ]
+}

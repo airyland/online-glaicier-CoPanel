@@ -1,0 +1,115 @@
+:root {
+  --copanel-color-primary: #7F56D9;
+  --copanel-color-primary-light: #F9F5FF;
+  --copanel-color-primary-dark: #6941C6;
+  --copanel-color-success: #12B76A;
+  --copanel-color-success-light: #ECFDF3;
+  --copanel-color-danger: #F97066;
+  --copanel-color-danger-dark: #F04438;
+  --copanel-color-danger-light: #FEF3F2;
+  --copanel-bg-color: #F2F4F7;
+  --copanel-bg-color-light: #F9FAFB;
+  --copanel-bg-color-dark: #EAECF0;
+  --copanel-text-color-primary: #334054;
+  --copanel-text-color-secondary: #667085;
+  --copanel-text-color-muted: #98A2B3;
+  --copanel-border-color: #F9FAFB;
+  --copanel-border-color-dark: #EAECF0;
+  --copanel-border-color-darker: #D0D5DD;
+  --copanel-border-radius: 12px;
+  
+  --el-color-primary: var(--copanel-color-primary);
+  --el-color-success: var(--copanel-color-success);
+  --el-color-danger: var(--copanel-color-danger);
+  --el-text-color-primary: var(--copanel-text-color-primary);
+  --el-text-color-regular: var(--copanel-text-color-primary);
+  --el-text-color-placeholder: var(--copanel-text-color-muted);
+  --el-border-color: var(--copanel-border-color-darker);
+  --el-border-radius-base: var(--copanel-border-radius);
+  --el-popper-border-radius: var(--copanel-border-radius);
+  --el-box-shadow-light: 0 0 12px rgba(51, 64, 84, .1);
+  --el-border-color-light: #F2F4F7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  line-height: 1.5;
+}
+
+body {
+  padding-right: 416px !important;
+}
+
+#copanel-widget {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 416px;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+}
+
+/* element plus */
+.el-popper {
+  z-index: 10000 !important;
+}
+
+.el-popover {
+  --el-popover-border-radius: var(--copanel-border-radius);
+}
+
+.el-scrollbar__bar.is-horizontal {
+  height: 4px;
+}
+
+.el-scrollbar__bar.is-vertical {
+  width: 4px;
+}
+
+.el-scrollbar__thumb {
+  background: var(--copanel-bg-color-dark);
+  opacity: .8;
+}
+
+.el-switch {
+  --el-switch-off-color: var(--copanel-bg-color-dark);
+}
+
+.el-form-item.is-error .el-input__wrapper {
+  box-shadow: 0 0 0 1px #FDA29B inset;
+}
+
+.el-message {
+  left: 0;
+  transform: translateX(calc(100vw - 208px - 50%));
+  min-width: 0;
+  padding: 8px 12px 8px 8px;
+  border: 0;
+  border-radius: 20px;
+  z-index: 10000 !important;
+}
+
+.el-message__icon {
+  margin-right: 4px;
+}
+
+.el-message__content {
+  font-size: 12px;
+}
+
+.el-message--error {
+  --el-message-bg-color: var(--el-color-danger);
+  --el-message-text-color: white;
+}
+
+.el-message--success {
+  --el-message-bg-color: var(--el-color-success);
+  --el-message-text-color: white;
+}
