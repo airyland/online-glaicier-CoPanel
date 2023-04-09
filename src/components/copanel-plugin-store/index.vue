@@ -63,7 +63,7 @@ watch(inject('pluginStoreVisible'), async (val) => {
 
 const activeTab = ref('store')
 const tabs = [{
-  label: 'Plugins Store',
+  label: 'Plugin Store',
   value: 'store'
 }, {
   label: 'Installed Plugins',
